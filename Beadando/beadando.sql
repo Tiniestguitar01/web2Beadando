@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Okt 23. 11:48
+-- Létrehozás ideje: 2023. Okt 23. 16:16
 -- Kiszolgáló verziója: 10.4.24-MariaDB
 -- PHP verzió: 8.1.6
 
@@ -77,14 +77,17 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`url`, `nev`, `szulo`, `jogosultsag`, `sorrend`) VALUES
-('admin', 'Admin', '', '001', 70),
+('admin', 'Admin', '', '001', 60),
 ('alapinfok', 'Alapinfók', 'elerhetoseg', '111', 10),
-('belepes', 'Belépés', '', '100', 50),
+('belepes', 'Belépés', '', '100', 80),
 ('elerhetoseg', 'Elérhetőség', '', '111', 30),
+('ertesitesek', 'Értesítések', '', '001', 50),
+('kapcsolat', 'Kapcsolat', '', '111', 40),
 ('kiegeszitesek', 'Kiegészítések', 'elerhetoseg', '011', 20),
-('kilepes', 'Kilépés', '', '011', 60),
+('kilepes', 'Kilépés', '', '011', 90),
 ('nyitolap', 'Nyitólap', '', '111', 10),
-('regisztracio', 'Regisztráció', '', '100', 40);
+('regisztracio', 'Regisztráció', '', '100', 70),
+('uzenofal', 'Üzenőfal', '', '011', 30);
 
 -- --------------------------------------------------------
 
