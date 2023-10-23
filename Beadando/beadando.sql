@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Okt 23. 10:48
+-- Létrehozás ideje: 2023. Okt 23. 11:48
 -- Kiszolgáló verziója: 10.4.24-MariaDB
 -- PHP verzió: 8.1.6
 
@@ -47,6 +47,20 @@ INSERT INTO `felhasznalok` (`id`, `csaladi_nev`, `utonev`, `bejelentkezes`, `jel
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet ehhez a táblához `kapcsolat`
+--
+
+CREATE TABLE `kapcsolat` (
+  `id` int(11) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `telefonszam` varchar(10) DEFAULT NULL,
+  `cim` varchar(40) NOT NULL,
+  `tartalom` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet ehhez a táblához `menu`
 --
 
@@ -72,6 +86,19 @@ INSERT INTO `menu` (`url`, `nev`, `szulo`, `jogosultsag`, `sorrend`) VALUES
 ('nyitolap', 'Nyitólap', '', '111', 10),
 ('regisztracio', 'Regisztráció', '', '100', 40);
 
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `uzenet`
+--
+
+CREATE TABLE `uzenet` (
+  `id` int(11) NOT NULL,
+  `felhasznalo` varchar(40) NOT NULL,
+  `tartalom` varchar(250) NOT NULL,
+  `datum` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Indexek a kiírt táblákhoz
 --
@@ -87,6 +114,12 @@ ALTER TABLE `felhasznalok`
 --
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`url`);
+
+--
+-- A tábla indexei `uzenet`
+--
+ALTER TABLE `uzenet`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
