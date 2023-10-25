@@ -16,7 +16,7 @@
     <body>
         <header>
             <div id="user"><em>Bejelentkezett: <?= $_SESSION['userlastname']." ".$_SESSION['userfirstname'] ?></em></div>
-            <h1 class="header">Faszomat már komolyan</h1>
+            <h1 class="header">Website</h1>
         </header>
         <nav class="navbar sticky-top navbar-expand-lg border-bottom border-body">
             <div class="container-fluid">

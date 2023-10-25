@@ -15,7 +15,7 @@ class Regisztral_Model
 					$retData['eredmeny'] = "ERROR";
 					$retData['uzenet'] = "Helytelen felhasználói név-jelszó pár!";
 
-					$sql = "insert into felhasznalok values (0, :last_name, :first_name, :username, :password, _1_)";
+					$sql = "insert into felhasznalok values (0, :last_name, :first_name, :username, :password, '_1_')";
 					$sth = $connection->prepare($sql);
 					$count = $sth->execute(Array(":last_name"=>$_POST["last_name"], ":first_name"=>$_POST["first_name"], ":username"=>$_POST["login"], ":password"=>password_hash($_POST["password"],PASSWORD_DEFAULT)));
 

@@ -30,6 +30,7 @@ Class Menu {
         
         return $menu.$submenu;
     }
+    
 }
 
 Menu::setMenu();
