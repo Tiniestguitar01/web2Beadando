@@ -1,5 +1,5 @@
+<div style="margin: 5em">
 <h2>
-    <br>Üdvözöljük az új rendszerünkben!<br>
-    <br>Jó munkát kívánunk a rendszerünkkel!<br>
-    <br>Kezdhet ...<br>
+    Üdvözöljük az oldalon!
 </h2>
+</div>

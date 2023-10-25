@@ -1,5 +1,9 @@
 body{
     font-family: 'Roboto';
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 header, footer {
@@ -46,4 +50,14 @@ ul a:hover {
     display:flex;
     align-items: center;
     justify-content: center;
+}
+
+.content{
+    padding:30px;
+    margin:20px;
+}
+
+.next{
+    display:inline-flex;
+    align-items: center;
 }

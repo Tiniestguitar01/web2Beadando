@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Beadando</title>
+        <title>Jatekok</title>
         <link rel="stylesheet" href="./css/main_style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,22 +15,31 @@
     </head>
     <body>
         <header>
-            <div id="user"><em>Bejelentkezett: <?= $_SESSION['userlastname']." ".$_SESSION['userfirstname'] ?></em></div>
-            <h1 class="header">Faszomat már komolyan</h1>
+            <?php
+                if(isset($_SESSION["userfirstname"]) && isset($_SESSION["userlastname"]))
+                {
+                    if($_SESSION["userfirstname"] != "" && $_SESSION["userlastname"] != "")
+                    echo "<div id=\"user\"><em>Bejelentkezett: ".$_SESSION['userlastname']." ".$_SESSION['userfirstname']."</em></div>";
+                }
+            ?>
+            <div class="next">
+                <img width="60px" src="./images/controller.png">
+                <h1 class="header">Játékok</h1>
+            </div>
         </header>
-        <nav class="navbar sticky-top navbar-expand-lg border-bottom border-body">
+        <nav class="bg-light navbar sticky-top navbar-expand-lg border-bottom border-body">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class=" ollapse navbar-collapse" id="navbarNavAltMarkup">
                     <?php echo Menu::getMenu($viewData['selectedItems']); ?>
                 </div>
             </div>
         </nav>
-        <section class="center">
+        <section class="content center">
             <?php if($viewData['render']) include($viewData['render']); ?>
         </section>
-        <footer class="center">&copy; Footer rész <?= date("Y") ?></footer>
+        <footer class="fixed-bottom center">&copy; Játékok <?= date("Y") ?></footer>
     </body>
 </html>

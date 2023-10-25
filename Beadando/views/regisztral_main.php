@@ -1,0 +1,1 @@
+<h2>Sikeres regisztráció!</h2>
