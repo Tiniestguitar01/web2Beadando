@@ -1,0 +1,63 @@
+body{
+    font-family: 'Roboto';
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+header, footer {
+    padding: 0.5em; 
+    color: white;
+    background-color: rgb(98, 166, 209);
+    clear: left;
+}
+h1.header {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    padding: 1em;
+}      
+
+ul a {
+    float:left;
+    width:6em; /* Fix szélességű gombok érhetők el. Érdemes azonban vigyázni ezzel a módszerrel, mert ha a szöveg nem fér ki, a dizájn szétesik. */
+    text-decoration:none; /* Ne legyen aláhúzva a link. */
+    color:rgb(0, 0, 0);
+    padding:0.2em 0.6em;
+    border-right:1px solid white;
+    border-radius: 0.3em;
+}
+
+ul a.selected{
+    background-color: blue;
+}
+
+ul a:hover {
+    transition: 0.2s;
+    background-color:#478ffc;
+    color:rgb(255, 255, 255);
+}
+
+.active{
+    background-color: blue;
+}
+
+
+.center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    padding:30px;
+    margin:20px;
+}
+
+.next{
+    display:inline-flex;
+    align-items: center;
+}

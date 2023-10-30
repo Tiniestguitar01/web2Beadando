@@ -1,0 +1,1 @@
+<h2>Köszönjük az üzenetet! <div id="user"><em><?= $_SESSION['userlastname']." ".$_SESSION['userfirstname'] ?></em></div></h2>
